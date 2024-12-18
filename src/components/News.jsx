@@ -9,7 +9,7 @@ const News = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/messages');
+        const response = await fetch('sunwave-bot.vercel.app/api/messages');
         const data = await response.json();
         setMessages(data);
       } catch (error) {
