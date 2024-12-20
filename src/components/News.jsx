@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { BsDiscord } from 'react-icons/bs';
 import { LinearGradient } from 'react-text-gradients'
+import { motion, useInView } from 'motion/react';
 
 const News = () => {
   const [messages, setMessages] = useState([]);
@@ -9,7 +10,7 @@ const News = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch(mport.meta.env.VITE_URL);
+        const response = await fetch('http://localhost:3001/api/messages');
         const data = await response.json();
         setMessages(data);
       } catch (error) {
@@ -24,8 +25,17 @@ const News = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   return (
-    <div className='text-white w-full h-screen flex justify-center items-center font-inter'>
+    <motion.div 
+      ref={ref}
+      initial={{ opacity: 0, y: 150 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150  }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className='text-white w-full h-screen flex justify-center items-center font-inter'
+    >
       <div className='flex flex-col justify-center items-center gap-5'>
         <LinearGradient 
           gradient={['to right', '#DFA998 ,#324DFF']}
@@ -48,7 +58,7 @@ const News = () => {
                 <div>
                   <p>{msg.author}</p>
                   <p className='text-white/60'>
-                    {new Date(msg.timestamp).toLocaleTimeString()}
+                    {new Date(msg.timestamp).toLocaleDateString()}
                   </p>
                 </div>
               </div>
@@ -63,12 +73,16 @@ const News = () => {
             </div>
           ))}
         </div>
-        <button className='bg-gradient-to-r from-[#243081] to-[#324DFF] py-2 px-4 mt-5 rounded-2xl flex justify-around items-center gap-4'>
+        <motion.button 
+          className='bg-gradient-to-r from-[#243081] to-[#324DFF] hover:from-[#3A55FF] hover:to-[#8999FF] py-2 px-4 mt-5 rounded-2xl flex justify-around items-center gap-4'
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2, type: "spring", stiffness: 200 }}
+        >
           <BsDiscord color="white" size={35}/>
           <p className='font-bold font-Opensans'>PŘIPOJTE SE K NÁM</p>
-        </button>
+        </motion.button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
