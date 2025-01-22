@@ -39,7 +39,7 @@ const News = () => {
       <div className='flex flex-col justify-center items-center gap-5'>
         <LinearGradient 
           gradient={['to right', '#DFA998 ,#324DFF']}
-          className='mt-8 mb-10 text-5xl font-bold'
+          className='mt-8 mb-10 max-sm:mb-1 max-sm:text-3xl text-5xl font-bold'
         >
           novinky
         </LinearGradient>
@@ -47,7 +47,7 @@ const News = () => {
           {messages.map((msg, index) => (
             <div
               key={index}
-              className='w-[300px] h-[400px] bg-[#1D1D1D] rounded-xl p-4 pb-3.5'
+              className='w-[300px] h-[400px] max-sm:w-[80vw] max-sm:h-[40vh] bg-[#1D1D1D] rounded-xl p-4 pb-3.5'
             >
               <div className='flex justify-start items-center gap-5'>
                 <img
@@ -63,7 +63,7 @@ const News = () => {
                 </div>
               </div>
               <div 
-                className='w-full h-[300px] mt-2 px-2 overflow-y-scroll '
+                className='w-full h-[80%] mt-2 px-2 overflow-y-scroll '
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                 <p className='whitespace-pre-wrap break-words overflow-hidden text-sm'>

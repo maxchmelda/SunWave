@@ -9,16 +9,9 @@ import { RiInstagramFill } from "react-icons/ri";
 
 const Findus = () => {
 
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
-
   return (
-    <motion.div 
+    <div 
         className='w-full font-inter flex justify-center items-center py-14 bg-gradient-to-r from-[#200734] to-[#580101]'
-        ref={ref}
-        initial={{ opacity: 0, y: 150 }}
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150  }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
     >
         <div className="bg-[#141414] py-10 px-20 max-sm:w-full flex justify-center items-center gap-12 flex-col sm:rounded-2xl">
             <h2 className="font-bold text-white text-2xl">kde nás najdete</h2>
@@ -49,7 +42,7 @@ const Findus = () => {
                 </a>
             </div>
         </div>
-    </motion.div>
+    </div>
   )
 }
 
