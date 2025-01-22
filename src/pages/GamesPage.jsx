@@ -11,7 +11,7 @@ import Minecraft from '../assets/minecraft.png';
 
 const GamesPage = () => {
   return (
-<div className='w-full min-h-screen bg-black'>
+    <div className='w-full min-h-screen bg-black'>
         <div 
           className='absolute h-[400px] w-full sm:top-[100px] top-[50px] z-0 opacity-25'
           style={{
@@ -42,7 +42,7 @@ const GamesPage = () => {
             <div className='text-white absolute top-[350px] sm:top-[460px] sm:left-[20vw] left-[5vw] flex justify-center items-center gap-6'>
                 <Link to="/" className="text-white hover:text-gray-400 underline">home</Link>
                 <p>/</p>
-                <p>pravidla</p>
+                <p>hry</p>
             </div>
           <div className='w-full bg-black flex flex-col justify-center items-center text-white mt-[300px]'>
             <div className='w-[90%] md:w-[60%] z-10 flex flex-col justify-center gap-10 items-center'>
