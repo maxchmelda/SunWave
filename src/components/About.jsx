@@ -27,14 +27,12 @@ const About = () => {
           lorem ipsum
         </LinearGradient>
         <span className='mt-2'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc auctor. In rutrum. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nulla non lectus sed nisl molestie malesuada. Quisque porta. Fusce nibh. Mauris tincidunt sem sed arcu. Integer tempor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-        <motion.button 
+        <button 
           className='bg-gradient-to-r from-[#243081] to-[#324DFF] hover:from-[#3A55FF] hover:to-[#8999FF] py-2 px-4 mt-10 rounded-2xl flex justify-around items-center gap-4'
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2, type: "spring", stiffness: 200 }}
         >
           <BsDiscord color="white" size={35}/>
           <p className='font-bold font-Opensans'>PŘIPOJTE SE K NÁM</p>
-        </motion.button>
+        </button>
       </div>
     </motion.div>
   )

@@ -10,7 +10,7 @@ const News = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/messages');
+        const response = await fetch('https://sunwave-bot.onrender.com/api/messages');
         const data = await response.json();
         setMessages(data);
       } catch (error) {
@@ -73,14 +73,12 @@ const News = () => {
             </div>
           ))}
         </div>
-        <motion.button 
+        <button 
           className='bg-gradient-to-r from-[#243081] to-[#324DFF] hover:from-[#3A55FF] hover:to-[#8999FF] py-2 px-4 mt-5 rounded-2xl flex justify-around items-center gap-4'
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2, type: "spring", stiffness: 200 }}
         >
           <BsDiscord color="white" size={35}/>
           <p className='font-bold font-Opensans'>PŘIPOJTE SE K NÁM</p>
-        </motion.button>
+        </button>
       </div>
     </motion.div>
   );

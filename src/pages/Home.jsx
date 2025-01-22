@@ -11,7 +11,7 @@ const Home = () => {
           alt="background" 
           className='absolute h-[800px] w-full opacity-50 top-[-100px] z-0'
         />
-        <div className=' absolute z-5 top-[450px] w-full h-[350px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]'>
+        <div className=' absolute z-5 top-[450px] w-full h-[px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]'>
 
         </div>
         <div className='flex justify-center items-start gap-20'>
@@ -25,7 +25,9 @@ const Home = () => {
             />
             <Navbar />
         </div>
-        <Games />
+        <div className='mt-[280px]'>
+          <Games />
+        </div>
         <About />
         <News />
         <Findus />
