@@ -13,7 +13,7 @@ const Findus = () => {
     <div 
         className='w-full font-inter flex justify-center items-center py-14 bg-gradient-to-r from-[#200734] to-[#580101]'
     >
-        <div className="bg-[#141414] py-10 px-20 max-sm:w-full flex justify-center items-center gap-12 flex-col sm:rounded-2xl">
+        <div className="bg-[#141414] py-10 px-20 max-sm:px-0 max-sm:py-8 max-sm:w-full flex justify-center items-center gap-12 flex-col sm:rounded-2xl">
             <h2 className="font-bold text-white text-2xl">kde nás najdete</h2>
             <div className="grid lg:grid-cols-4 sm:grid-cols-2 min-[821px]:grid-cols-3 grid-cols-1 gap-10">
                 <a

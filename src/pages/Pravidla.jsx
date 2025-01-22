@@ -1,11 +1,11 @@
-import React from 'react'
-import { motion } from 'motion/react'
-import { Findus, Footer, Navbar } from '../components'
-import City from '../assets/city.jpg'
-import Logo from '../assets/logo.png'
-import { Link } from 'react-router-dom'
-import FivemLogo from '../assets/fivemrp_logo.png'
-import { LinearGradient } from 'react-text-gradients'
+import React from 'react';
+import { motion } from 'motion/react';
+import { Findus, Footer, Navbar } from '../components';
+import City from '../assets/city.jpg';
+import Logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
+import FivemLogo from '../assets/fivemrp_logo.png';
+import { LinearGradient } from 'react-text-gradients';
 
 const pravidla = [
     {
@@ -60,8 +60,6 @@ const pravidla = [
     }
 ];
 
-
-
 const rimskeCislice = {
     "1": "I",
     "2": "II",
@@ -74,52 +72,56 @@ const rimskeCislice = {
     "9": "IX",
     "10": "X",
     "11": "XI"
-}
-  
+};
 
 const order = [1, 6, 2, 7, 3, 8, 4, 9, 5, 10];
 
-
-
 const Pravidla = () => {
   return (
-    <div className='w-full min-h-screen bg-black font-inter'>
-        <img
-          src={City} 
-          alt="background" 
-          className='absolute h-[800px] w-full opacity-30 top-[-120px] z-0'
+    <div className='w-full min-h-screen bg-black'>
+        <div 
+          className='absolute h-[400px] w-full sm:top-[100px] top-[50px] z-0 opacity-25'
+          style={{
+            backgroundImage: `url(${City})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         />
-        <div className=' absolute z-5 top-[450px] w-full h-[350px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]'>
 
-        </div>
-        <div className='flex justify-center items-start gap-20'>
+        <div className='absolute z-5 top-[350px] sm:top-[450px] w-full h-[400px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]' />
+        <div className='absolute z-5 top-[0px] w-full h-[150px] bg-gradient-to-b from-black to-[#0000002a]' />
+
+        <div className='flex justify-around items-start max-[1035px]:items-center max-[1035px]:justify-between max-[1035px]:px-20 max-[530px]:px-2'>
+          <div className='pl-32 max-[530px]:pl-28'>
             <motion.img 
               initial={{ x: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
               src={Logo} 
               alt="logo" 
-              className='w-[180px] z-10 mt-3' 
+              className='w-[180px] z-10 mt-3 max-[530px]:w-[120px]' 
             />
-            <Navbar />
+          </div>
+          <Navbar />
         </div>
         <div>
-            <div className='text-white absolute top-[460px] left-[20vw] flex justify-center items-center gap-6'>
+            <div className='text-white absolute top-[350px] sm:top-[460px] sm:left-[20vw] left-[5vw] flex justify-center items-center gap-6'>
                 <Link to="/" className="text-white hover:text-gray-400 underline">home</Link>
                 <p>/</p>
                 <p>pravidla</p>
             </div>
 
-            <div className='absolute top-[490px] bg-black flex flex-col justify-center items-center w-full'>
-                <div className='w-[60%] py-10'>
+            <div className='absolute top-[380px] sm:top-[500px] bg-black flex flex-col justify-center items-center w-full'>
+                <div className='w-[100%] md:w-[60%] py-10 max-sm:pt-5'>
                     <LinearGradient 
                         gradient={['to right', '#7728FF ,#585858']}
-                        className='mt-8 text-5xl font-bold'
+                        className='mt-8 sm:text-5xl text-4xl font-bold max-sm:ml-2'
                     >
                         Komunitní pravidla
                     </LinearGradient>
 
-                    <div className="w-full grid grid-rows-5 grid-flow-col mt-10">
+                    <div className="w-full grid grid-rows-5 max-sm:grid-rows-10 overflow-hidden grid-flow-col mt-10">
                     {pravidla.map((pravidlo, index) => {
                         const delayIndex = order.indexOf(pravidlo.id);
                         const delay = delayIndex * 0.2;
@@ -132,7 +134,7 @@ const Pravidla = () => {
                             animate={{ x: 0, opacity: 1, transition: { delay: delay, duration: 0.5 } }}
                             whileHover={{ scale: 1.02, transition: { delay: 0.1, duration: 0.2}}}
                             key={pravidlo.id}
-                            className="p-4 text-white py-10 cursor-pointer"
+                            className="p-4 text-white py-10 cursor-pointer w-full"
                             style={{
                             background: pravidlo.id % 2 === 0 ? "#000000" : "linear-gradient(to right, #171717, #000000)"
                             }}
@@ -151,24 +153,23 @@ const Pravidla = () => {
                         initial = {{ opacity: 0, y: 100 }}
                         animate={{ opacity: 1, y: 0 , transition: { delay: 2, duration: 1 }}}
                         whileHover={{ scale: 1.02, transition: { delay: 0.2, duration: 0.2}}}
-                        className="p-4 text-white py-10 bg-none w-[700px] mx-auto cursor-pointer"
+                        className="p-4 text-white py-10 bg-none w-full mx-auto cursor-pointer" // Changed to w-full
                     >
-                        <div className="flex justify-start items-center gap-6 w-[400px]">
+                        <div className="flex justify-start items-center gap-6 w-full">
                             <h2 className="text-[#7728FF] text-2xl font-[700]">XI.</h2>
                             <h3 className='text-lg font-[700]'>Řešení reportů</h3>
                         </div>
-                        <p className='mt-4 block text-[#898989] w-[700px]'>
+                        <p className='mt-4 block text-[#898989] w-full'>
                         Všechny reporty se budou řešit na discordu po RP akci, pokud tam nebude nějaké porušení pravidel, které ovlivňuje další RP. Pokud se nalezne porušení pravidel závažných tak je možné RP akci stopnout a jít řešit na discordu.  Zákaz řešení svých akci a členů své frakce krom výjimek, lidé kteří smějí řešit své frakce jsou označeni rolí Výjimka řešení REPORTŮ.
                         </p>
                     </motion.div>
-
-
                 </div>
                 <Findus />
                 <Footer />
             </div>
         </div>
     </div>
-)}
+  )
+}
 
 export default Pravidla;

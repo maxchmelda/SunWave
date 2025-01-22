@@ -6,12 +6,12 @@ import { motion } from 'motion/react'
 
 const Games = () => {
   return (
-    <div className='w-full flex justify-center flex-wrap items-center font-inter gap-4 max-sm:pb-10'>
+    <div className='w-full flex justify-center flex-wrap items-center font-inter max-sm:gap-10 gap-4 max-sm:pb-10'>
         <motion.a
             href='/hry/fivemrp'
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.5, ease: "easeOut" } }}
-            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] z-10 bg-no-repeat bg-center md:mb-10 cursor-pointer'
+            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] z-10 max-sm:rounded-xl bg-no-repeat bg-center md:mb-10 cursor-pointer'
             whileHover={{ scale: 1.05, transition: { delay: 0} }}
             style={{
                 background: `url(${Fivem_RP})`,
@@ -26,7 +26,7 @@ const Games = () => {
         <motion.div
             initial={{ y: 120, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.7, ease: "easeOut" } }}
-            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] z-10 bg-no-repeat bg-center md:mb-20 cursor-pointer'
+            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] max-sm:rounded-xl z-10 bg-no-repeat bg-center md:mb-20 cursor-pointer'
             whileHover={{ scale: 1.05, transition: { delay: 0} }}
             style={{
                 background: `url(${Fivem_M})`,
@@ -41,7 +41,7 @@ const Games = () => {
         <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.9, ease: "easeOut" } }}
-            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] z-10 bg-no-repeat bg-center md:mb-10 cursor-pointer'
+            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] max-sm:rounded-xl z-10 bg-no-repeat bg-center md:mb-10 cursor-pointer'
             whileHover={{ scale: 1.05, transition: { delay: 0} }}
             style={{
                 background: `url(${Rust})`,
@@ -56,7 +56,7 @@ const Games = () => {
         <motion.div
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 1.1, ease: "easeOut" } }}
-            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] z-10 bg-no-repeat bg-center cursor-pointer'
+            className='max-sm:w-[80vw] max-sm:h-[80vw] w-[200px] h-[200px] max-sm:rounded-xl z-10 bg-no-repeat bg-center cursor-pointer'
             whileHover={{ scale: 1.05, transition: { delay: 0} }}
             style={{
                 background: `url(${Minecraft})`,

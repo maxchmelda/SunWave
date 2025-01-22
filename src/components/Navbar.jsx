@@ -29,9 +29,9 @@ const Navbar = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="z-10 min-[1035px]:hidden"
+        className="z-10 min-[1035px]:hidden mr-5"
       >
-        <FiMenu color={"white"} size={40} />
+        <FiMenu color={"white"} className='w-[30px] h-[30px]' />
       </button>
 
       {/* Mobile Menu */}
