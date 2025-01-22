@@ -8,7 +8,7 @@ const Games = () => {
   return (
     <div className='w-full flex justify-center items-center font-inter gap-4'>
         <motion.a
-            href='/hry/fivem-rp'
+            href='/hry/fivemrp'
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.5, ease: "easeOut" } }}
             className='w-[200px] h-[200px] z-10 bg-no-repeat bg-center mb-10 cursor-pointer'
