@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 
 const Games = () => {
   return (
-    <div className='w-full flex justify-center items-center font-inter gap-4'>
+    <div className='w-full flex justify-center flex-wrap items-center font-inter gap-4'>
         <motion.a
             href='/hry/fivemrp'
             initial={{ y: 100, opacity: 0 }}

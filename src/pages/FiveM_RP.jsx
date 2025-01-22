@@ -13,7 +13,7 @@ const FiveM_RP = () => {
         <img
           src={City} 
           alt="background" 
-          className='absolute h-[800px] w-full opacity-50 top-[-100px] z-0'
+          className='absolute h-[800px] w-full opacity-30 top-[-120px] z-0'
         />
         <div className=' absolute z-5 top-[450px] w-full h-[350px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]'>
 

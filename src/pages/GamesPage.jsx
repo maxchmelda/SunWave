@@ -15,7 +15,7 @@ const GamesPage = () => {
         <img
           src={City} 
           alt="background" 
-          className='absolute h-[800px] w-full opacity-50 top-[-100px] z-0'
+          className='absolute h-[800px] w-full opacity-30 top-[-120px] z-0'
         />
         <div className=' absolute z-5 top-[450px] w-full h-[350px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]'>
 
@@ -50,7 +50,7 @@ const GamesPage = () => {
         </motion.div>
         <div className='w-full flex justify-center items-center font-inter gap-4 mt-20 mb-20'>
                 <motion.a
-                    href="/hry/fivem-rp"
+                    href="/hry/fivemrp"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1, transition: { duration: 0.2, delay: 0.5, ease: "easeOut" } }}
                     whileHover={{ scale: 1.05, transition: { delay: 0} }}

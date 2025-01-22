@@ -77,6 +77,8 @@ const rimskeCislice = {
 }
   
 
+const order = [1, 6, 2, 7, 3, 8, 4, 9, 5, 10];
+
 
 
 const Pravidla = () => {
@@ -85,7 +87,7 @@ const Pravidla = () => {
         <img
           src={City} 
           alt="background" 
-          className='absolute h-[800px] w-full opacity-50 top-[-100px] z-0'
+          className='absolute h-[800px] w-full opacity-30 top-[-120px] z-0'
         />
         <div className=' absolute z-5 top-[450px] w-full h-[350px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]'>
 
@@ -118,28 +120,38 @@ const Pravidla = () => {
                     </LinearGradient>
 
                     <div className="w-full grid grid-rows-5 grid-flow-col mt-10">
-                        {pravidla.map((pravidlo) => (
-                            <div
-                                key={pravidlo.id}
-                                className="p-4 text-white py-10"
-                                style={{
-                                    background:
-                                    pravidlo.id % 2 === 0
-                                        ? "#000000"
-                                        : "linear-gradient(to right, #171717, #000000)",
-                                }}
-                                >
-                                <div className="flex justify-start items-center gap-6">
-                                    <h2 className="text-[#7728FF] text-2xl font-[700]">{rimskeCislice[pravidlo.id]}</h2>
-                                    <h3 className='text-lg font-[700]'>{pravidlo.heading}</h3>
-                                </div>
-                                <p className='mt-4 w-[83%] mx-auto block text-[#898989]'>{pravidlo.content}</p>
+                    {pravidla.map((pravidlo, index) => {
+                        const delayIndex = order.indexOf(pravidlo.id);
+                        const delay = delayIndex * 0.2;
+
+                        const xValue = pravidlo.id >= 6 ? 200 : -200;
+
+                        return (
+                        <motion.div
+                            initial={{ x: xValue, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1, transition: { delay: delay, duration: 0.5 } }}
+                            whileHover={{ scale: 1.02, transition: { delay: 0.1, duration: 0.2}}}
+                            key={pravidlo.id}
+                            className="p-4 text-white py-10 cursor-pointer"
+                            style={{
+                            background: pravidlo.id % 2 === 0 ? "#000000" : "linear-gradient(to right, #171717, #000000)"
+                            }}
+                        >
+                            <div className="flex justify-start items-center gap-6">
+                            <h2 className="text-[#7728FF] text-2xl font-[700]">{pravidlo.id}</h2>
+                            <h3 className="text-lg font-[700]">{pravidlo.heading}</h3>
                             </div>
-                        ))}
+                            <p className="mt-4 w-[83%] mx-auto block text-[#898989]">{pravidlo.content}</p>
+                        </motion.div>
+                        );
+                    })}
                     </div>
                     
-                    <div
-                        className="p-4 text-white py-10 bg-black w-[700px] mx-auto"
+                    <motion.div
+                        initial = {{ opacity: 0, y: 100 }}
+                        animate={{ opacity: 1, y: 0 , transition: { delay: 2, duration: 1 }}}
+                        whileHover={{ scale: 1.02, transition: { delay: 0.2, duration: 0.2}}}
+                        className="p-4 text-white py-10 bg-none w-[700px] mx-auto cursor-pointer"
                     >
                         <div className="flex justify-start items-center gap-6 w-[400px]">
                             <h2 className="text-[#7728FF] text-2xl font-[700]">XI.</h2>
@@ -148,7 +160,7 @@ const Pravidla = () => {
                         <p className='mt-4 block text-[#898989] w-[700px]'>
                         Všechny reporty se budou řešit na discordu po RP akci, pokud tam nebude nějaké porušení pravidel, které ovlivňuje další RP. Pokud se nalezne porušení pravidel závažných tak je možné RP akci stopnout a jít řešit na discordu.  Zákaz řešení svých akci a členů své frakce krom výjimek, lidé kteří smějí řešit své frakce jsou označeni rolí Výjimka řešení REPORTŮ.
                         </p>
-                    </div>
+                    </motion.div>
 
 
                 </div>
