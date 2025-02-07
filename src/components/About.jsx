@@ -29,13 +29,15 @@ const About = () => {
           gradient={['to right', '#979797 ,#754141']}
           className="mb-4 text-5xl font-bold max-sm:text-2xl max-sm:mb-0 "
         >
-          lorem ipsum
+          O serveru
         </LinearGradient>
         <span className="mt-2">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc auctor. In rutrum. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus.
+        Vítejte na našem herním portálu! Nezaměřujeme se na jednu hru, ale snažíme se pro každý server odvést maximum. Dbáme na férové a přátelské prostředí pro všechny hráče.
+
+        Náš projekt vznikl z touhy vytvořit komunitu, kde se každý cítí vítán. Začali jsme jako reakce na špatnou správu jiných serverů a postupně se rozrostli v plnohodnotný herní portál. Neustále ho vylepšujeme, aby hráči měli co nejlepší zážitek.
         </span>
         <span className="max-[650px]:hidden">
-          Nulla non lectus sed nisl molestie malesuada. Quisque porta. Fusce nibh. Mauris tincidunt sem sed arcu. Integer tempor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Naším cílem je nejen kvalitní zábava, ale i propojení hráčů, kteří si vzájemně pomáhají a tvoří skvělou komunitu. Děkujeme za vaši podporu a těšíme se na společné hraní!
         </span>
 
 

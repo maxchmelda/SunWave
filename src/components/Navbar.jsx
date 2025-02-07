@@ -8,7 +8,6 @@ const Navbar = () => {
   const selected = useLocation().pathname;
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(isOpen);
 
   return (
     <>

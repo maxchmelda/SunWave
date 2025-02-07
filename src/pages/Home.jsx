@@ -36,8 +36,8 @@ const Home = () => {
         <div className='mt-[320px] max-sm:mt-[250px]'>
           <div className='pb-5 w-full'>
             <LinearGradient 
-                gradient={['to right', '#DFA998 ,#324DFF']}
-                className='sm:hidden text-4xl font-bold ml-10'
+                gradient={['to right', '#ba2d2d ,#ffa200']}
+                className='sm:hidden text-3xl font-bold ml-10'
             >
                 Naše hry
             </LinearGradient>

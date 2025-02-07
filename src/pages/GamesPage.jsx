@@ -45,9 +45,13 @@ const GamesPage = () => {
                 <p>hry</p>
             </div>
           <div className='w-full bg-black flex flex-col justify-center items-center text-white mt-[300px]'>
-            <div className='w-[90%] md:w-[60%] z-10 flex flex-col justify-center gap-10 items-center'>
+            <div className='w-[90%] md:w-[45%] z-10 flex flex-col justify-center gap-10 items-center'>
               <h2 className='text-3xl font-bold'>Lorem ipsum</h2>
-              <p className='text-white font-light text-center text-sm'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat.</p>
+              <p className='text-white font-light text-center text-sm'>
+                Vítej na našem herním portálu! Tady najdeš přehled našich serverů – pravidelně je aktualizujeme, aby sis mohl užít ten nejlepší zážitek. Každá hra má vlastní stránku s popisem, pravidly a návodem, jak se připojit.
+                Vyber si hru, která tě baví, a přidej se k naší komunitě!
+
+              </p>
             </div>
           </div>
         </div>

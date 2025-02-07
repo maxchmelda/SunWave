@@ -160,7 +160,8 @@ const Pravidla = () => {
                             <h3 className='text-lg font-[700]'>Řešení reportů</h3>
                         </div>
                         <p className='mt-4 block text-[#898989] w-full'>
-                        Všechny reporty se budou řešit na discordu po RP akci, pokud tam nebude nějaké porušení pravidel, které ovlivňuje další RP. Pokud se nalezne porušení pravidel závažných tak je možné RP akci stopnout a jít řešit na discordu.  Zákaz řešení svých akci a členů své frakce krom výjimek, lidé kteří smějí řešit své frakce jsou označeni rolí Výjimka řešení REPORTŮ.
+                        Všechny reporty se budou řešit na discordu po RP akci, pokud tam nebude nějaké porušení pravidel, které ovlivňuje další RP. Pokud se nalezne porušení pravidel závažných tak je možné RP akci stopnout a jít řešit na discordu.  Zákaz řešení svých akci a členů své frakce krom výjimek, lidé kteří smějí řešit své frakce jsou označeni rolí Výjimka řešení REPORTŮ. <br/> <br/>
+                        Komunita 4YouTeamu si vyhrazuje právo tato pravidla kdykoliv aktualizovat. Hráči jsou povinni se seznámit s aktuálním zněním pravidel.
                         </p>
                     </motion.div>
                 </div>
