@@ -55,13 +55,13 @@ const GamesPage = () => {
             </div>
           </div>
         </div>
-        <div className='w-full flex flex-wrap justify-center items-center font-inter gap-4 mt-20 mb-20'>
+        <div className='w-full flex flex-wrap justify-center items-center font-inter gap-4 max-sm:gap-8 mt-20 mb-20'>
                 <motion.a
                     href="/hry/fivemrp"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1, transition: { duration: 0.2, delay: 0.5, ease: "easeOut" } }}
                     whileHover={{ scale: 1.05, transition: { delay: 0} }}
-                    className='w-[200px] h-[200px] z-10 bg-no-repeat bg-center cursor-pointer'
+                    className='w-[200px] h-[200px] max-sm:w-[80vw] max-sm:h-[80vw] max-sm:rounded-2xl z-10 bg-no-repeat bg-center cursor-pointer'
                     style={{
                         background: `url(${Fivem_RP})`,
                         backgroundSize: 'cover',
@@ -76,7 +76,7 @@ const GamesPage = () => {
                     initial={{ y: 120, opacity: 0 }}
                     animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.7, ease: "easeOut" } }}
                     whileHover={{ scale: 1.05, transition: { delay: 0} }}
-                    className='w-[200px] h-[200px] z-10 bg-no-repeat bg-center cursor-pointer'
+                    className='w-[200px] h-[200px] max-sm:w-[80vw] max-sm:h-[80vw] max-sm:rounded-2xl z-10 bg-no-repeat bg-center cursor-pointer'
                     style={{
                         background: `url(${Fivem_M})`,
                         backgroundSize: 'cover',
@@ -91,7 +91,7 @@ const GamesPage = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.9, ease: "easeOut" } }}
                     whileHover={{ scale: 1.05, transition: { delay: 0} }}
-                    className='w-[200px] h-[200px] z-10 bg-no-repeat bg-center cursor-pointer'
+                    className='w-[200px] h-[200px] max-sm:w-[80vw] max-sm:h-[80vw] max-sm:rounded-2xl z-10 bg-no-repeat bg-center cursor-pointer'
                     style={{
                         background: `url(${Rust})`,
                         backgroundSize: 'cover',
@@ -106,7 +106,7 @@ const GamesPage = () => {
                     initial={{ y: 80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 1.1, ease: "easeOut" } }}
                     whileHover={{ scale: 1.05, transition: { delay: 0} }}
-                    className='w-[200px] h-[200px] z-10 bg-no-repeat bg-center cursor-pointer'
+                    className='w-[200px] h-[200px] max-sm:w-[80vw] max-sm:h-[80vw] max-sm:rounded-2xl z-10 bg-no-repeat bg-center cursor-pointer'
                     style={{
                         background: `url(${Minecraft})`,
                         backgroundSize: 'cover',

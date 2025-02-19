@@ -34,12 +34,13 @@ const News = () => {
       initial={{ opacity: 0, y: 150 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150  }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className='text-white w-full pt-10 pb-20 max-sm:pt-0 max-sm:pb-10 flex justify-center items-center font-inter'
+      className='text-white w-full pt-10 pb-20 max-sm:pb-15 max-sm:pt-15 flex justify-center items-center font-inter'
+      id="news"
     >
       <div className='flex flex-col justify-center items-center gap-5'>
         <LinearGradient 
           gradient={['to right', '#DFA998 ,#324DFF']}
-          className='mt-8 mb-10 max-sm:mb-1 max-sm:text-3xl text-5xl font-bold'
+          className='mt-8 mb-10 max-sm:mb-1 max-sm:text-4xl text-5xl font-bold'
         >
           novinky
         </LinearGradient>

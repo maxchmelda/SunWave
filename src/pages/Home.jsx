@@ -17,7 +17,7 @@ const Home = () => {
           }}
         />
 
-        <div className='absolute z-5 top-[350px] sm:top-[450px] w-full h-[400px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]' />
+        <div className=' max-sm:hidden absolute z-5 top-[350px] sm:top-[450px] w-full h-[400px] bg-gradient-to-b from-[#0000002a] via-[#000000] to-[#00000000]' />
         <div className='absolute z-5 top-[0px] w-full h-[150px] bg-gradient-to-b from-black to-[#0000002a]' />
 
         <div className='flex justify-around items-start max-[1035px]:items-center max-[1035px]:justify-between max-[1035px]:px-20 max-[530px]:px-2'>
@@ -34,13 +34,14 @@ const Home = () => {
           <Navbar />
         </div>
         <div className='mt-[320px] max-sm:mt-[250px]'>
-          <div className='pb-5 w-full'>
+          <div className='pb-5 w-full mb-8 sm:hidden flex items-center justify-start gap-6'>
             <LinearGradient 
-                gradient={['to right', '#ba2d2d ,#ffa200']}
-                className='sm:hidden text-3xl font-bold ml-10'
+                gradient={['to right', '#432594 ,#b785d9']}
+                className='text-4xl font-bold ml-10'
             >
                 Naše hry
             </LinearGradient>
+            <hr className='w-[35%] border-[#793fab]' />
           </div>
           <Games />
         </div>

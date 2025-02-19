@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import { motion } from 'framer-motion'; // Corrected import
 import { FiMenu } from "react-icons/fi";
@@ -7,6 +7,28 @@ import { FiMenu } from "react-icons/fi";
 const Navbar = () => {
   const selected = useLocation().pathname;
   const [isOpen, setIsOpen] = useState(false);
+
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const navigate = useNavigate();
+
+  const navigateToNews = () => {
+    navigate("/");
+  
+    setTimeout(() => {
+      const element = document.getElementById("news");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
+  
 
 
   return (
@@ -40,13 +62,19 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="min-[1035px]:hidden text-white z-20 underline rounded-xl font-inter font-[400] text-sm absolute top-32 right-5 bg-[#1D1D1D] py-3 px-6 shadow-white/40 shadow-md flex flex-col justify-center items-center gap-2"
+          className="min-[1035px]:hidden text-white z-20 underline rounded-xl font-inter font-[400] text-sm absolute top-24 right-5 bg-[#1D1D1D] py-3 px-6 shadow-white/40 shadow-md flex flex-col justify-center items-center gap-2"
         >
           <Link to="/" onClick={() => setIsOpen(false)}>home</Link>
           <Link to="/hry" onClick={() => setIsOpen(false)}>hry</Link>
           <Link to="/pravidla" onClick={() => setIsOpen(false)}>komunitní pravidla</Link>
-          <Link to="/novinky" onClick={() => setIsOpen(false)}>novinky</Link>
-          <Link to="/kontakt" onClick={() => setIsOpen(false)}>kontakt</Link>
+          <button onClick={() => {
+            setIsOpen(false);
+            navigateToNews()
+          }}>novinky</button>
+          <button onClick={() => {
+            setIsOpen(false);
+            scrollToSection("findus");
+          }}>kontakt</button>
         </motion.div>
       )}
     </>

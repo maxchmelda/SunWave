@@ -11,10 +11,11 @@ const Findus = () => {
 
   return (
     <div 
-        className='w-full font-inter flex justify-center items-center py-14 bg-gradient-to-r from-[#200734] to-[#580101]'
+        className='w-full font-inter flex justify-center items-center py-14 max-sm:py-0 bg-gradient-to-r from-[#200734] to-[#580101]'
+        id="findus"
     >
-        <div className="bg-[#141414] py-10 px-20 max-sm:px-0 max-sm:py-8 max-sm:w-full flex justify-center items-center gap-12 flex-col sm:rounded-2xl">
-            <h2 className="font-bold text-white text-2xl">kde nás najdete</h2>
+        <div className="bg-[#141414] max-sm:py-20 py-10 px-20 max-sm:px-0 max-sm:w-full flex justify-center items-center gap-12 flex-col sm:rounded-2xl">
+            <h2 className="font-bold text-white text-2xl max-sm:text-3xl">kde nás najdete</h2>
             <div className="grid lg:grid-cols-4 sm:grid-cols-2 min-[821px]:grid-cols-3 grid-cols-1 gap-10">
                 <a
                     className="w-[220px] cursor-pointer font-Opensans font-bold py-1.5 px-10 flex justify-center items-center gap-2 bg-gradient-to-r from-[#243081] hover:from-[#3A55FF] to-[#324DFF] hover:to-[#8999FF] rounded-2xl"
